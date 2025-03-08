@@ -12,13 +12,13 @@ class reviews extends Model
     protected $table = 'reviews';
     protected $primaryKey = 'review_id';
     public $incrementing = true;
-    protected $keyType = 'int';
+    // protected $keyType = 'int';
     public $timestamps = true;
 
     // MEMBUAT RELASI/RELATIONSHIP ANTARA TABEL reviews DAN users
     public function user()
     {
-        return $this->belongsTo(users::class, 'user_id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'user_id');
     }
 
     // MEMBUAT RELASI/RELATIONSHIP ANTARA TABEL reviews DAN alatRental

@@ -12,9 +12,21 @@ class alatRental extends Model
     protected $table = 'alat_rental';
     protected $primaryKey = 'alat_id';
     public $incrementing = true;
-    protected $keyType = 'int';
+    // protected $keyType = 'int';
     public $timestamps = true;
 
+    public function transactions()
+    {
+        return
+        $this->hasMany(transactions::class, 'alat_id', 'alat_id');
+    }
+
+    public function reviews()
+    {
+        return
+        $this->hasMany(reviews::class, 'alat_id', 'alat_id');
+    }
+    
     protected $fillable = [
         'nama',
         'jenis',
