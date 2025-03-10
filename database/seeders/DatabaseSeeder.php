@@ -7,6 +7,8 @@ use App\Models\alatRental;
 use App\Models\transactions;
 use App\Models\reviews;
 use App\Models\paymentMethod;
+use App\Models\facilities;
+use App\Models\carFacilities;
 // use App\Models\User;
 // use Database\Factories\UserFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -24,6 +26,7 @@ class DatabaseSeeder extends Seeder
         paymentMethod::factory(10)->create();
         transactions::factory(10)->create();
         reviews::factory(10)->create();
-
+        facilities::factory(10)->create();
+        carFacilities::factory(10)->create();
     }
 }
