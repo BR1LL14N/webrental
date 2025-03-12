@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class envoiceModel extends Model
 {
     use HasFactory;
-    protected $table = 'invoice';
+    protected $table = 'envoice';
     protected $primaryKey = 'envoice_id';
     public $timestamps = true;
     public $incrementing = true;

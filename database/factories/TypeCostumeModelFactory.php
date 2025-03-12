@@ -4,12 +4,11 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\typeCostumeModel;
-use PhpParser\Node\Stmt\Foreach_;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class TypeCostumeFactory extends Factory
+class TypeCostumeModelFactory extends Factory
 {
     protected $model = typeCostumeModel::class;
     /**

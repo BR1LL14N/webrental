@@ -10,7 +10,7 @@ use App\Models\typeCostumeModel;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class CostumeFactory extends Factory
+class CostumeModelFactory extends Factory
 {
     protected $model = costumeModel::class;
 
@@ -26,7 +26,7 @@ class CostumeFactory extends Factory
             'kostum_description' => $this->faker->text(),
             'kostum_image' => $this->faker->imageUrl(50, 50),
             'kostum_price' => $this->faker->randomNumber(5),
-            'jenis_kostum_id' => typeCostumeModel::inRandomOrder()->first()->jenis_kostum_id ?? null,
+            'jenis_kostum_id' => typeCostumeModel::inRandomOrder()->value('jenis_kostum_id') ?? typeCostumeModel::factory(),
         ];
     }
 }
