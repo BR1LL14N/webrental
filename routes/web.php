@@ -6,6 +6,14 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/cars', function () {
-    return view('all_cars_page');
+Route::get('/costume', function () {
+    return view('costumePage');
+});
+
+Route::get('/booking', function () {
+    return view('myBookingPage');
+});
+
+Route::get('/history', function () {
+    return view('rentalHistory');
 });
