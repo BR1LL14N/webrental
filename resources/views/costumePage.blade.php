@@ -107,8 +107,9 @@
     </main>
   </div>
 
-  <script src="{{ asset('js/toggleSidebar.js') }}"></script>
   <script src="{{ asset('js/activePage.js') }}"></script>
+  <script src="{{ asset('js/toggleSidebar.js') }}"></script>
+
 </body>
 </html>
 
