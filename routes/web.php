@@ -17,3 +17,7 @@ Route::get('/booking', function () {
 Route::get('/history', function () {
     return view('rentalHistory');
 });
+
+Route::get('/profile', function () {
+    return view('userProfile');
+});

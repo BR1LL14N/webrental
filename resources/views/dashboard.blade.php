@@ -7,28 +7,7 @@
   {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-            },
-          }
-        }
-      }
-    }
-  </script>
+  
 </head>
 <body class="bg-gray-50 min-h-screen">
   {{-- SIDEBAR --}}
@@ -36,37 +15,19 @@
 
   <!-- Main Content -->
   <div class="lg:ml-64 min-h-screen transition-all duration-300">
-    <!-- Top Navigation -->
-    <header class="bg-white shadow-sm">
-      <div class="flex items-center justify-between p-4">
-        <button class="lg:hidden text-gray-500 hover:text-gray-700" onclick="toggleSidebar()">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="flex items-center space-x-4">
-          <div class="relative">
-            <button class="text-gray-500 hover:text-gray-700">
-              <i class="fas fa-bell"></i>
-              <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
-            </button>
-          </div>
-          <div class="flex items-center space-x-2">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile" class="h-8 w-8 rounded-full object-cover">
-            <span class="text-sm font-medium text-gray-700">John Doe</span>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- HEADER -->
+    <x-header></x-header>
 
     <!-- Dashboard Content -->
     <main class="p-6">
       <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
       
       <!-- Stats -->
-      <x-booking-stat></x-booking-stat>
+      @includeif('user-component.booking-stats')
       
       
       <!-- Recent Bookings -->
-      <x-recent-booking></x-recent-booking>
+      @includeif('user-component.recent-booking')
       
       <!-- Recommended Costumes -->
       <div class="bg-white rounded-lg shadow">
